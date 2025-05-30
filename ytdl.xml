@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<!-- config file for plugin.ytdl.php -->
+	
+	<!--
+		Specifies whether users, operators, admins or masteradmins should be blocked from using this command:
+		
+		0 - Allow command use, default for all groups
+		1 - Require payment before use
+		2 - Block command use
+	-->
+	<block_user>0</block_user>
+	<block_operator>0</block_operator>
+	<block_admin>0</block_admin>
+	<block_masteradmin>0</block_masteradmin>
+	
+	<!--
+		For the players that must pay coppers before using the command, specifies in what way they must pay for each song:
+		
+		0 - Static (fixed price), default option
+		1 - Dynamic (price depends on length)
+	-->
+	<pay_type>0</pay_type>
+	
+	<!--
+		For the players that must pay coppers before using the command, specifies the price for each song:
+		
+		If pay_type is 0, the price is fixed. If pay_type is 1, it's price per minute (divided per seconds, rounding up).
+		
+		Default: 50
+	-->
+	<price>50</price>
+	
+	<!--
+		The minimum amount of coppers the server login must have to allow paying for songs.
+		
+		If the server has less coppers that the amount set below, players that must pay to play songs won't be able to play songs.
+		
+		Default: 1000
+	-->
+	<min_server_coppers>1000</min_server_coppers>
+	
+	<!--
+		The minimum and maximum durations of a song, in seconds.
+		
+		If a song's duration is outside of this range, it gets rejected.
+		
+		Defaults: 60 and 600
+	-->
+	<min_duration>60</min_duration>
+	<max_duration>600</max_duration>
+	
+	<!--
+		The minimum and maximum file sizes of a song, in kilobytes.
+		
+		If a song's filesize is outside of this range, it gets rejected.
+		
+		Defaults: 0 and 10240
+	-->
+	<min_filesize>0</min_filesize>
+	<max_filesize>10240</max_filesize>
+	
+	<!--
+		Specifies where yt-dlp should save downloaded files. If empty (default option), it will use "GameData\Music\YTDL".
+	
+		The path can be relative to the currently running PHP instance, but if you must change this, it is recommended to only use absolute paths.
+	-->
+	<location></location>
+	
+	<!--
+		This option is identical to the one seen in musicserver.xml
+	-->
+	<music_server>Music/YTDL</music_server>
+
+</settings>
