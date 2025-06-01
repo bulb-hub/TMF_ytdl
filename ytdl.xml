@@ -3,21 +3,40 @@
 	<!-- config file for plugin.ytdl.php -->
 	
 	<!--
-		Specifies whether users, operators, admins or masteradmins should be blocked from using this command:
+		Specifies whether users, operators, admins or masteradmins should be blocked from using commands:
 		
-		0 - Allow command use, default for all groups
+		0 - Allow command use
 		1 - Require payment before use
 		2 - Block command use
+		
+		For all commands and for all groups, the default is 0.
 	-->
-	<block_user>0</block_user>
-	<block_operator>0</block_operator>
-	<block_admin>0</block_admin>
-	<block_masteradmin>0</block_masteradmin>
+	<commands>
+		<!--
+			Downloads the media specified by the link and sets it as server music.
+		-->
+		<ytdl>
+			<block_user>0</block_user>
+			<block_operator>0</block_operator>
+			<block_admin>0</block_admin>
+			<block_masteradmin>0</block_masteradmin>
+		</ytdl>
+		
+		<!--
+			Searches for a YouTube upload, downloads it and sets it as server music.
+		-->
+		<youtube>
+			<block_user>0</block_user>
+			<block_operator>0</block_operator>
+			<block_admin>0</block_admin>
+			<block_masteradmin>0</block_masteradmin>
+		</youtube>
+	</commands>
 	
 	<!--
 		For the players that must pay coppers before using the command, specifies in what way they must pay for each song:
 		
-		0 - Static (fixed price), default option
+		0 (default) - Static (fixed price)
 		1 - Dynamic (price depends on length)
 	-->
 	<pay_type>0</pay_type>
